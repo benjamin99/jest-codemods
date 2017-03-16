@@ -39,7 +39,8 @@ const TRANSFORMER_CHAI_ASSERT = 'chai-assert';
 const TRANSFORMER_TAPE = 'tape';
 const TRANSFORMER_AVA = 'ava';
 const TRANSFORMER_MOCHA = 'mocha';
-const allTransformers = [TRANSFORMER_TAPE, TRANSFORMER_AVA, TRANSFORMER_MOCHA];
+const TRANSFORMER_EXPECT = 'expect';
+const allTransformers = [TRANSFORMER_TAPE, TRANSFORMER_AVA, TRANSFORMER_MOCHA, TRANSFORMER_EXPECT];
 
 function supportFailure(supportedItems) {
     console.log(`\nCurrently, jest-codemods only has support for ${supportedItems}.`);
@@ -68,6 +69,9 @@ if (cli.input.length) {
         }, {
             name: 'Mocha',
             value: TRANSFORMER_MOCHA,
+        }, {
+            name: 'Expect',
+            value: TRANSFORMER_EXPECT,
         }, {
             name: 'All of the above!',
             value: 'all',

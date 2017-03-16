@@ -2,8 +2,10 @@
 
 Codemods that simplify migrating JavaScript test files from
 [Mocha](https://github.com/mochajs/mocha),
-[Tape](https://github.com/substack/tape)
-and [AVA](https://github.com/avajs/ava)
+[Tape](https://github.com/substack/tape),
+[AVA](https://github.com/avajs/ava),
+[Expect](https://github.com/mjackson/expect),
+and [proxyquire](https://github.com/thlorenz/proxyquire)
 to [Jest](https://facebook.github.io/jest/).
 
 <img src="screenshot.gif" width="300" align="right" style="margin-bottom: 1em; margin-left: 1em">
@@ -78,6 +80,7 @@ $ jscodeshift -t node_modules/jest-codemods/dist/transformers/tape.js test-folde
 $ jscodeshift -t node_modules/jest-codemods/dist/transformers/ava.js test-folder
 $ jscodeshift -t node_modules/jest-codemods/dist/transformers/mocha.js test-folder
 $ jscodeshift -t node_modules/jest-codemods/dist/transformers/chai-assert.js test-folder
+$ jscodeshift -t node_modules/jest-codemods/dist/transformers/expect.js test-folder
 ```
 
 
